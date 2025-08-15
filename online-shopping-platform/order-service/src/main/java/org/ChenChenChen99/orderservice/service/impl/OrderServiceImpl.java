@@ -93,7 +93,7 @@ public class OrderServiceImpl implements OrderService {
             event.setCreatedAt(Instant.now());
             event.setTotalAmount(order.getTotalPrice());
 
-            List<OrderItem> items = orderItemRepository.findByOrderId(orderId);
+            List<OrderItem> items = orderItemRepository.findByKeyOrderId(orderId);
             List<ItemEvent> itemEvents = items.stream()
                     .map(i -> new ItemEvent(i.getKey().getItemId().toString(), i.getQty()))
                     .collect(Collectors.toList());
@@ -147,7 +147,7 @@ public class OrderServiceImpl implements OrderService {
         order.setUpdatedAt(Instant.now());
         Order savedOrder = orderRepository.save(order);
 
-        List<OrderItem> orderItems = orderItemRepository.findByOrderId(orderId);
+        List<OrderItem> orderItems = orderItemRepository.findByKeyOrderId(orderId);
 
         List<ItemEvent> itemEvents = orderItems.stream()
                 .map(oi -> new ItemEvent(

@@ -12,6 +12,4 @@ import java.util.UUID;
 @Repository
 public interface OrderItemRepository extends CassandraRepository<OrderItem, OrderItemKey> {
     List<OrderItem> findByKeyOrderId(UUID orderId);
-
-    List<OrderItem> findByOrderId(UUID orderId);
 }
