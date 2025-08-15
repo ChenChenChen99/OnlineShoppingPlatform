@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  cassandra:
+    contact-points: localhost
+    port: 9042
+    local-datacenter: datacenter1
+    keyspace-name: order_keyspace
+    schema-action: create_if_not_exists
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: order-service
+      properties:
+        spring.json.trusted.packages: "*"
+
+  application:
+    name: order-service
+
+eureka:
+  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+    enabled: false

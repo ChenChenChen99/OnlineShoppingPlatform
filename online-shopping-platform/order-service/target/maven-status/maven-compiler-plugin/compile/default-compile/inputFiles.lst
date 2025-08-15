@@ -1,0 +1,16 @@
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/entity/OrderItem.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/entity/Order.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/entity/OrderItemKey.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/entity/OrderPrimaryKey.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/controller/OrderController.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/kafka/OrderConsumer.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/dto/OrderRequest.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/OrderServiceApplication.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/repository/OrderItemRepository.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/service/impl/OrderServiceImpl.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/repository/OrderRepository.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/dto/OrderItemRequest.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/entity/OrderStatus.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/kafka/OrderProducer.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/service/OrderService.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/order-service/src/main/java/org/ChenChenChen99/orderservice/config/SecurityConfig.java

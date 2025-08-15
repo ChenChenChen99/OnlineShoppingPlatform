@@ -1,0 +1,10 @@
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/RegisterRequest.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/LoginRequest.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/repository/UserRepository.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/AccountServiceApplication.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/service/AccountService.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/UpdateRequest.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/controller/AccountController.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/entity/User.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/LoginResponse.java
+/Users/chenqian/Downloads/repo/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/config/SecurityConfig.java
