@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {
         "org.ChenChenChen99.itemservice",
         "org.ChenChenChen99.security",
+        "org.ChenChenChen99.kafka",
 })
 public class ItemServiceApplication {
     public static void main(String[] args) {
