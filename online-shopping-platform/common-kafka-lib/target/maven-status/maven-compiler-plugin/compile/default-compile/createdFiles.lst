@@ -1,5 +1,5 @@
-org/ChenChenChen99/kafka/dto/InventoryEvent.class
 org/ChenChenChen99/kafka/config/KafkaConfig.class
+org/ChenChenChen99/kafka/dto/InventoryEvent.class
 org/ChenChenChen99/kafka/dto/OrderEvent.class
 org/ChenChenChen99/kafka/dto/ItemEvent.class
 org/ChenChenChen99/kafka/constants/KafkaTopics.class

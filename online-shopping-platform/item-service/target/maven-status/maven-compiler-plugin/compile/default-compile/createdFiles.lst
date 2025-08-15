@@ -1,10 +1,10 @@
 org/ChenChenChen99/itemservice/entity/Item$Inventory$InventoryBuilder.class
-org/ChenChenChen99/itemservice/dto/InventoryRequest.class
 org/ChenChenChen99/itemservice/repository/ItemRepository.class
+org/ChenChenChen99/itemservice/dto/InventoryRequest.class
 org/ChenChenChen99/itemservice/kafka/InventoryProducer.class
 org/ChenChenChen99/itemservice/config/SecurityConfig.class
-org/ChenChenChen99/itemservice/controller/ItemController.class
 org/ChenChenChen99/itemservice/service/ItemService.class
+org/ChenChenChen99/itemservice/controller/ItemController.class
 org/ChenChenChen99/itemservice/entity/Item.class
 org/ChenChenChen99/itemservice/ItemServiceApplication.class
 org/ChenChenChen99/itemservice/kafka/InventoryConsumer.class

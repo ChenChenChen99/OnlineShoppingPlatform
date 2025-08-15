@@ -1,6 +1,7 @@
 package org.ChenChenChen99.paymentservice.kafka;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.ChenChenChen99.kafka.constants.KafkaTopics;
 import org.ChenChenChen99.kafka.dto.OrderEvent;
 import org.ChenChenChen99.paymentservice.entity.Payment;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 import java.util.UUID;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class PaymentConsumer {
@@ -21,6 +23,7 @@ public class PaymentConsumer {
 
     @KafkaListener(topics = KafkaTopics.ORDER_CREATED, groupId = "payment-service")
     public void handleOrderCreated(OrderEvent event) {
+        log.info("Received ORDER_CREATED event: {}", event);
         paymentService.submitPayment(
                 java.util.UUID.fromString(event.getOrderId().toString()),
                 java.util.UUID.fromString(event.getUserId().toString()),
@@ -31,6 +34,7 @@ public class PaymentConsumer {
 
     @KafkaListener(topics = KafkaTopics.ORDER_CANCELLED, groupId = "payment-service")
     public void handleOrderCancelled(OrderEvent event) {
+        log.info("Received ORDER_CANCELLED event: {}", event);
         UUID orderId = UUID.fromString(event.getOrderId());
         Optional<Payment> paymentOpt = paymentRepository.findByOrderId(orderId);
         if (paymentOpt.isPresent()) {

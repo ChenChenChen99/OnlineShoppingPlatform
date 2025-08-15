@@ -36,22 +36,11 @@ services:
       - CASSANDRA_START_RPC=true
     volumes:
       - cassandra_data:/var/lib/cassandra
-      - ./init-scripts:/init-scripts
     healthcheck:
       test: ["CMD-SHELL", "cqlsh -e 'describe keyspaces;' || exit 1"]
       interval: 20s
       timeout: 10s
       retries: 10
-    command: >
-      bash -c "
-        cassandra -f &
-        until cqlsh -e 'describe keyspaces'; do
-          echo 'Waiting for Cassandra...'
-          sleep 5
-        done
-        cqlsh -f /init-scripts/init.cql
-        wait
-      "
 
   zookeeper:
     image: bitnami/zookeeper:3.9

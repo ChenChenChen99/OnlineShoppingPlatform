@@ -1,6 +1,7 @@
 package org.ChenChenChen99.itemservice.kafka;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.ChenChenChen99.itemservice.service.InventoryService;
 import org.ChenChenChen99.kafka.constants.KafkaTopics;
 import org.ChenChenChen99.kafka.dto.ItemEvent;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.time.Instant;
 import java.util.UUID;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class InventoryConsumer {
@@ -21,12 +23,11 @@ public class InventoryConsumer {
 
     @KafkaListener(topics = KafkaTopics.ORDER_PAID, groupId = "inventory-service")
     public void handleOrderPaid(OrderEvent event) {
+        log.info("Received ORDER_PAID event: {}", event);
         boolean success = true;
         for (ItemEvent item : event.getItems()) {
             try {
-                String itemId = item.getItemId();
-                int quantity = item.getQuantity();
-                inventoryService.reserveInventory(itemId, quantity);
+                inventoryService.reserveInventory(item.getItemId(), item.getQuantity());
             } catch (RuntimeException e) {
                 success = false;
                 break;
@@ -48,6 +49,7 @@ public class InventoryConsumer {
 
     @KafkaListener(topics = KafkaTopics.ORDER_COMPLETED, groupId = "inventory-service")
     public void handleOrderCompleted(OrderEvent event) {
+        log.info("Received ORDER_COMPLETED event: {}", event);
         for (ItemEvent item : event.getItems()) {
             String itemId = item.getItemId();
             int quantity = item.getQuantity();
@@ -57,6 +59,7 @@ public class InventoryConsumer {
 
     @KafkaListener(topics = KafkaTopics.ORDER_CANCELLED, groupId = "inventory-service")
     public void handleOrderCancelled(OrderEvent event) {
+        log.info("Received ORDER_CANCELLED event: {}", event);
         for (ItemEvent item : event.getItems()) {
             String itemId = item.getItemId();
             int quantity = item.getQuantity();
