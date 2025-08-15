@@ -20,10 +20,6 @@ public class InventoryController {
 
     @PutMapping("/reserve")
     public void reserveInventory(@RequestBody InventoryRequest req) {
-        System.out.println("reserveInventory - InventoryRequest object: " + req);
-        System.out.println("reserveInventory - itemId from request body: " + req.getItemId());
-        System.out.println("reserveInventory - quantity from request body: " + req.getQuantity());
-
         inventoryService.reserveInventory(req.getItemId(), req.getQuantity());
     }
 
