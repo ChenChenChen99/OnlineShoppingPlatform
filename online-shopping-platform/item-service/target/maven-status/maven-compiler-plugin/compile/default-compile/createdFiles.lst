@@ -1,3 +1,4 @@
+org/ChenChenChen99/itemservice/dto/ItemRequest.class
 org/ChenChenChen99/itemservice/entity/Item$Inventory$InventoryBuilder.class
 org/ChenChenChen99/itemservice/repository/ItemRepository.class
 org/ChenChenChen99/itemservice/dto/InventoryRequest.class

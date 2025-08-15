@@ -2,6 +2,7 @@ package org.ChenChenChen99.itemservice.service;
 
 
 import lombok.RequiredArgsConstructor;
+import org.ChenChenChen99.itemservice.dto.ItemRequest;
 import org.ChenChenChen99.itemservice.entity.Item;
 import org.ChenChenChen99.itemservice.repository.ItemRepository;
 import org.bson.types.ObjectId;
@@ -29,7 +30,7 @@ public class ItemService {
         item.setPrice(request.getPrice());
         item.setUpc(request.getUpc());
         item.setImageUrls(request.getImageUrls());
-        Inventory inventory = new Inventory();
+        Item.Inventory inventory = new Item.Inventory();
         inventory.setAvailable(request.getAvailable());
         inventory.setReserved(request.getReserved());
         item.setInventory(inventory);

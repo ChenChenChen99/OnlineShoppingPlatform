@@ -3,6 +3,7 @@
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/controller/InventoryController.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/controller/ItemController.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/dto/InventoryRequest.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/dto/ItemRequest.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/entity/Item.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/kafka/InventoryConsumer.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/item-service/src/main/java/org/ChenChenChen99/itemservice/kafka/InventoryProducer.java
