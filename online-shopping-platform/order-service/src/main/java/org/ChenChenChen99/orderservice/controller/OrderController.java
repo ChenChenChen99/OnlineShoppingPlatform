@@ -32,7 +32,7 @@ public class OrderController {
         List<OrderItem> items = request.getItems().stream()
                 .map(i -> {
                     OrderItem item = new OrderItem();
-                    item.setKey(new OrderItemKey(null, UUID.fromString(i.getItemId()))); // orderId 先留 null
+                    item.setKey(new OrderItemKey(null, i.getItemId())); 
                     item.setQty(i.getQty());
                     item.setPrice(i.getPrice());
                     return item;

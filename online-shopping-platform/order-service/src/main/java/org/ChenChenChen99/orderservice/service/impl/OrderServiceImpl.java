@@ -57,7 +57,7 @@ public class OrderServiceImpl implements OrderService {
 
         List<ItemEvent> itemEvents = items.stream().map(i -> {
             ItemEvent ie = new ItemEvent();
-            ie.setItemId(i.getKey().getItemId().toString());
+            ie.setItemId(i.getKey().getItemId());
             ie.setQuantity(i.getQty());
             return ie;
         }).toList();
@@ -95,7 +95,7 @@ public class OrderServiceImpl implements OrderService {
 
             List<OrderItem> items = orderItemRepository.findByKeyOrderId(orderId);
             List<ItemEvent> itemEvents = items.stream()
-                    .map(i -> new ItemEvent(i.getKey().getItemId().toString(), i.getQty()))
+                    .map(i -> new ItemEvent(i.getKey().getItemId(), i.getQty()))
                     .collect(Collectors.toList());
             event.setItems(itemEvents);
 
@@ -126,8 +126,13 @@ public class OrderServiceImpl implements OrderService {
         event.setStatus(OrderStatus.CANCELLED.name());
         event.setCreatedAt(Instant.now());
         event.setIdempotencyKey(UUID.randomUUID().toString());
-        event.setItems(Collections.emptyList());
         event.setTotalAmount(order.getTotalPrice());
+
+        List<OrderItem> items = orderItemRepository.findByKeyOrderId(orderId);
+        List<ItemEvent> itemEvents = items.stream()
+                .map(i -> new ItemEvent(i.getKey().getItemId(), i.getQty()))
+                .collect(Collectors.toList());
+        event.setItems(itemEvents);
 
         orderProducer.sendOrderCancelled(event);
     }

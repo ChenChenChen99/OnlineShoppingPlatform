@@ -16,11 +16,11 @@ public class OrderItemKey implements Serializable {
     private UUID orderId;
 
     @PrimaryKeyColumn(name = "item_id", type = PrimaryKeyType.CLUSTERED, ordinal = 1)
-    private UUID itemId;
+    private String itemId;
 
     public OrderItemKey() {}
 
-    public OrderItemKey(UUID orderId, UUID itemId) {
+    public OrderItemKey(UUID orderId, String itemId) {
         this.orderId = orderId;
         this.itemId = itemId;
     }
