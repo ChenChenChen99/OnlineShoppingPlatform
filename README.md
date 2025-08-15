@@ -41,7 +41,7 @@ online-shopping-platform/
 │
 ├── docker/
 │   ├── docker-compose.yml           # For running all services + DBs + Kafka
-│   └── env/                         # Env files, init scripts, volumes
+│   └── init-scripts/                # Init scripts
 │
 ├── README.md
 └── pom.xml                          # Parent pom (Spring Boot multi-module)
