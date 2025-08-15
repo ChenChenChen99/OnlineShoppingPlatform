@@ -1,10 +1,10 @@
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/LoginRequest.java
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/UpdateRequest.java
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/config/SecurityConfig.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/AccountServiceApplication.java
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/repository/UserRepository.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/config/SecurityConfig.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/controller/AccountController.java
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/service/AccountService.java
-/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/RegisterRequest.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/LoginRequest.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/LoginResponse.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/RegisterRequest.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/dto/UpdateRequest.java
 /home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/entity/User.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/repository/UserRepository.java
+/home/qchen/OnlineShoppingPlatform/online-shopping-platform/account-service/src/main/java/org/ChenChenChen99/accountservice/service/AccountService.java
