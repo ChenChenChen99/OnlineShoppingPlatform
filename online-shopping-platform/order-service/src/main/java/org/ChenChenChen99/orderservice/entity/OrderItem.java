@@ -19,9 +19,6 @@ public class OrderItem {
     @PrimaryKey
     private OrderItemKey key;
 
-    @Column("name")
-    private String name;
-
     @Column("qty")
     private int qty;
 

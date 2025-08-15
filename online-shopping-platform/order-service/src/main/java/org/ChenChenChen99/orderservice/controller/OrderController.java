@@ -3,6 +3,7 @@ package org.ChenChenChen99.orderservice.controller;
 import org.ChenChenChen99.orderservice.dto.OrderRequest;
 import org.ChenChenChen99.orderservice.entity.Order;
 import org.ChenChenChen99.orderservice.entity.OrderItem;
+import org.ChenChenChen99.orderservice.entity.OrderItemKey;
 import org.ChenChenChen99.orderservice.entity.OrderStatus;
 import org.ChenChenChen99.orderservice.service.OrderService;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +30,13 @@ public class OrderController {
         order.setTotalPrice(request.getTotalPrice());
 
         List<OrderItem> items = request.getItems().stream()
-                .map(i -> new OrderItem(null, i.getName(), i.getQty(), i.getPrice()))
+                .map(i -> {
+                    OrderItem item = new OrderItem();
+                    item.setKey(new OrderItemKey(null, UUID.fromString(i.getItemId()))); // orderId 先留 null
+                    item.setQty(i.getQty());
+                    item.setPrice(i.getPrice());
+                    return item;
+                })
                 .toList();
 
         Order savedOrder = orderService.createOrder(userId, order, items);

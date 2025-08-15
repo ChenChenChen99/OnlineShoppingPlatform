@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
         orderRepository.save(order);
 
         for (OrderItem item : items) {
-            item.setKey(new OrderItemKey(orderId, UUID.randomUUID()));
+            item.getKey().setOrderId(orderId);
             orderItemRepository.save(item);
         }
 
