@@ -28,4 +28,8 @@ public class ItemController {
                 .orElseThrow(() -> new RuntimeException("Item not found"));
     }
 
+    @PostMapping
+    public Item createItem(@RequestBody ItemRequest request) {
+        return itemService.createItem(request);
+    }
 }

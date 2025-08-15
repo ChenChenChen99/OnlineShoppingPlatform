@@ -22,4 +22,18 @@ public class ItemService {
     public List<Item> getAllItems() {
         return itemRepository.findAll();
     }
+
+    public Item createItem(ItemRequest request) {
+        Item item = new Item();
+        item.setName(request.getName());
+        item.setPrice(request.getPrice());
+        item.setUpc(request.getUpc());
+        item.setImageUrls(request.getImageUrls());
+        Inventory inventory = new Inventory();
+        inventory.setAvailable(request.getAvailable());
+        inventory.setReserved(request.getReserved());
+        item.setInventory(inventory);
+
+        return itemRepository.save(item);
+    }
 }
