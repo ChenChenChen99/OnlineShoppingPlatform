@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {
-    "org.ChenChenChen99.orderservice",
+    "org.ChenChenChen99.paymentservice",
     "org.ChenChenChen99.kafka"
 })
 public class PaymentServiceApplication {
